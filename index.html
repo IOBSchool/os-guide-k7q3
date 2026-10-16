@@ -57,6 +57,12 @@
     display:block;margin-top:32px;width:210px;max-width:60%;height:auto;
   }
 
+  .hero-row{display:flex;align-items:flex-end;gap:16px;margin-top:4px;}
+  .hero-txt{flex:1.15;min-width:0;}
+  .hero-txt .lead{font-size:13px;line-height:1.8;}
+  .hero-photo{flex:1;min-width:0;}
+  .hero-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:45% 20%;border-radius:18px;background:#ece9e4;}
+  .hero-txt .logo{margin-top:22px;max-width:100%;width:170px;}
   section{padding:40px 0;}
   .sec-title{
     font-size:21px;font-weight:700;margin-bottom:22px;
@@ -159,7 +165,7 @@
   .curri li:last-child{border-bottom:none;}
   .curri .m{display:inline-block;min-width:3.2em;color:var(--point);font-weight:700;}
   .curri-h{font-size:13px;font-weight:700;color:var(--point);margin:16px 0 0;letter-spacing:.05em;}
-  .hl{color:var(--point);}
+  .hl{color:inherit;background:linear-gradient(transparent 55%,#FFE066 55%);}
   .total-row{
     margin-top:18px;background:#fbeee6;border-radius:10px;
     padding:16px 18px;text-align:center;font-size:15px;line-height:1.8;
@@ -231,9 +237,14 @@
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">木原様向け｜ご案内ページ</div>
-    <h1>「知っている」から、<br>自分で確かめ、<br>自分の言葉で伝えられる人へ。</h1>
-    <div class="lead">ドイツIOBオーガニックスクール<br>オーガニック専門家コース「共同学習」プランのご案内</div>
-    <img class="logo" src="iob-logo-orange.png" alt="Institut für Organic Business" width="210">
+    <h1>「知っている」から、<br>自分で確かめ、<br>自分の言葉で<br>伝えられる人へ。</h1>
+    <div class="hero-row">
+      <div class="hero-txt">
+        <div class="lead">ドイツIOB<br>オーガニックスクール<br>オーガニック専門家コース<br>「共同学習」プランのご案内</div>
+        <img class="logo" src="iob-logo-orange.png" alt="Institut für Organic Business" width="210">
+      </div>
+      <div class="hero-photo"><img src="img/portrait.jpg" alt="ドイツIOBオーガニックスクール代表 レムケなつこ" width="500" height="625"></div>
+    </div>
   </div>
 </header>
 
@@ -380,6 +391,17 @@
         <div class="meta"><div class="vname">ゆうきちゃん</div><div class="vrole">ピラティス講師／酵素ドリンク「Natural FLORA」（お話・4分53秒）</div></div>
       </a>
     </div>
+    <p class="small" style="margin-bottom:10px;">地域で講師として活動している受講生の声もあります。</p>
+    <div class="voices" style="margin-bottom:22px;">
+      <a class="voice" href="https://www.youtube.com/watch?v=W8xM_UIhfYI" target="_blank" rel="noopener">
+        <div class="thumb"><span class="yt">▶ YouTube</span><img src="https://i.ytimg.com/vi/W8xM_UIhfYI/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></div>
+        <div class="meta"><div class="vname">森 奈央 さん</div><div class="vrole">「森のorganic shop Bitte」オーナー／北海道・七飯町</div></div>
+      </a>
+      <a class="voice" href="https://www.youtube.com/watch?v=UYamCvGDoW0" target="_blank" rel="noopener">
+        <div class="thumb"><span class="yt">▶ YouTube</span><img src="https://i.ytimg.com/vi/UYamCvGDoW0/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></div>
+        <div class="meta"><div class="vname">上鶴 恵子 さん</div><div class="vrole">経営者／地域でオーガニックを伝える講師・山梨県</div></div>
+      </a>
+    </div>
     <p class="small" style="margin-bottom:10px;">資格を取得した受講生のみなさんの声もあります。</p>
     <div class="voices">
       <a class="voice" href="https://www.youtube.com/watch?v=hBM6TNmnu30&list=PLC7ldLFCvgQgf1VTb2o4MUEl4UYon0t7q" target="_blank" rel="noopener">
@@ -397,10 +419,6 @@
       <a class="voice" href="https://www.youtube.com/watch?v=PQUvv2M6yZY&list=PLC7ldLFCvgQgf1VTb2o4MUEl4UYon0t7q" target="_blank" rel="noopener">
         <div class="thumb"><span class="yt">▶ YouTube</span><img src="https://i.ytimg.com/vi/PQUvv2M6yZY/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></div>
         <div class="meta"><div class="vname">矢野 浩道 さん</div><div class="vrole">オーガニック専門家</div></div>
-      </a>
-      <a class="voice" href="https://www.youtube.com/watch?v=g5SsI_LQb3Q&list=PLC7ldLFCvgQgf1VTb2o4MUEl4UYon0t7q" target="_blank" rel="noopener">
-        <div class="thumb"><span class="yt">▶ YouTube</span><img src="https://i.ytimg.com/vi/g5SsI_LQb3Q/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></div>
-        <div class="meta"><div class="vname">田中 優介 さん</div><div class="vrole">オーガニック専門家</div></div>
       </a>
       <a class="voice" href="https://www.youtube.com/watch?v=ah6qDS44X-Q&list=PLC7ldLFCvgQgf1VTb2o4MUEl4UYon0t7q" target="_blank" rel="noopener">
         <div class="thumb"><span class="yt">▶ YouTube</span><img src="https://i.ytimg.com/vi/ah6qDS44X-Q/hqdefault.jpg" alt="" loading="lazy"><span class="play"></span></div>
