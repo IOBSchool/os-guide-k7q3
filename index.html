@@ -30,39 +30,22 @@
   .wrap{max-width:680px;margin:0 auto;padding:0 20px;}
   h1,h2,h3,.mincho{font-family:"Zen Old Mincho",serif;}
 
-  /* HERO */
-  .hero{
-    background:var(--white);
-    padding:48px 0 40px;
-    border-bottom:3px solid var(--point);
-  }
-  .hero .eyebrow{
-    color:var(--point);
-    font-weight:700;
-    font-size:14px;
-    letter-spacing:.04em;
-    margin-bottom:14px;
-  }
-  .hero h1{
-    font-size:27px;
-    font-weight:700;
-    line-height:1.5;
-    margin-bottom:18px;
-  }
-  .hero .lead{
-    font-size:15px;
-    color:var(--sub);
-  }
-  .logo{
-    display:block;margin-top:32px;width:210px;max-width:60%;height:auto;
-  }
+  /* HERO（FVの型：ピル型ラベル→縦書きの見出し1本＋写真(文字と分ける)→権威1行→リード→ボタン1つ） */
+  .nw{display:inline-block}
+  .hero{background:var(--bg);padding:26px 0 30px;}
+  .hero .eyebrow{display:inline-block;color:#fff;background:var(--point);font-size:12.5px;font-weight:700;letter-spacing:.05em;border-radius:999px;padding:3px 14px;}
+  .hero .grid{display:flex;gap:12px;margin-top:20px;height:440px;}
+  .hero h1{writing-mode:vertical-rl;font-family:"Zen Old Mincho",serif;font-weight:900;font-size:26px;line-height:1.62;letter-spacing:.1em;height:100%;color:var(--ink);}
+  .hero h1 .y{background:linear-gradient(to left,#FFE066 0 58%,transparent 58%);padding:0 2px;}
+  .hero .ph{flex:1;min-width:0;border-radius:18px;background:url("img/natsuko.jpg") 38% 18%/cover;}
+  .hero .who{margin-top:10px;font-size:12.5px;line-height:1.7;color:var(--sub);text-align:right;}
+  .hero .who b{font-family:"Zen Old Mincho",serif;font-size:15px;color:var(--ink);}
+  .hero .q{font-family:"Zen Old Mincho",serif;font-weight:700;font-size:16px;line-height:1.8;margin:20px 0 6px;text-align:center;}
+  .hero .s{font-size:13.5px;line-height:1.8;text-align:center;margin-bottom:6px;}
+  .hero .cta{display:block;margin-top:14px;background:var(--point);color:#fff;text-decoration:none;text-align:center;padding:15px;border-radius:12px;font-weight:700;font-family:"Zen Old Mincho",serif;font-size:17px;letter-spacing:.04em;}
+  @media(min-width:560px){.hero .grid{height:540px;}.hero h1{font-size:32px;}}
+  @media(max-width:360px){.hero .grid{height:410px;}.hero h1{font-size:24px;}}
 
-  .hero-row{display:flex;align-items:flex-end;gap:16px;margin-top:4px;}
-  .hero-txt{flex:1.15;min-width:0;}
-  .hero-txt .lead{font-size:13px;line-height:1.8;}
-  .hero-photo{flex:1;min-width:0;}
-  .hero-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:45% 20%;border-radius:18px;background:#ece9e4;}
-  .hero-txt .logo{margin-top:22px;max-width:100%;width:170px;}
   section{padding:40px 0;}
   .sec-title{
     font-size:21px;font-weight:700;margin-bottom:22px;
@@ -236,23 +219,25 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">木原様向け｜ご案内ページ</div>
-    <h1>「知っている」から、<br>自分で確かめ、<br>自分の言葉で<br>伝えられる人へ。</h1>
-    <div class="hero-row">
-      <div class="hero-txt">
-        <div class="lead">ドイツIOB<br>オーガニックスクール<br>オーガニック専門家コース<br>「共同学習」プランのご案内</div>
-        <img class="logo" src="iob-logo-orange.png" alt="Institut für Organic Business" width="210">
-      </div>
-      <div class="hero-photo"><img src="img/portrait.jpg" alt="ドイツIOBオーガニックスクール代表 レムケなつこ" width="500" height="625"></div>
+    <div class="eyebrow">木原さん向け｜ご案内ページ</div>
+    <div class="grid">
+      <h1><span class="nw">「知っている」から、</span><br><span class="nw">自分で確かめ、</span><br><span class="nw y">自分の言葉で伝えられる人へ。</span></h1>
+      <div class="ph" role="img" aria-label="レムケなつこ"></div>
     </div>
+    <p class="who">ドイツIOBオーガニックスクール　代表<br><b>レムケなつこ</b>　ドイツ在住オーガニック教育の専門家</p>
+    <p class="q"><span class="nw">先程は、長い時間お話しくださり、</span><br><span class="nw">ありがとうございました。</span></p>
+    <p class="s"><span class="nw">何を学べるのか、いつから参加できるのか、</span><br><span class="nw">いくらで申し込めるのか。</span><br><span class="nw">判断に必要なことを、このページにまとめました。</span></p>
+    <a class="cta" href="#pay">お申し込みへ進む</a>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <p>木原さん<br>先程は、長い時間お話しくださり、ありがとうございました。</p>
     <p>食で人の体を支えてきた14年の知識と現場の経験。これから、生米パンの教室や販売を始めようとしていること。そして、もっと知識を深めたい、自分の言葉で伝えられるようになりたい、近くに同じ関心を持つ人が少なく、話せる時間そのものが特別に感じる、というお話も聞かせていただきました。</p>
-    <p>このページでは、判断に必要なことをまとめてお伝えします。<br>何を学べるのか。どんな場があるのか。いつから参加できるのか。そして、いくらで申し込めるのか。</p>
+    <div class="photo">
+      <img src="img/band_hokkaido2026.jpg" alt="2026年 北海道のオーガニック視察ツアーに集まった参加者" loading="lazy">
+      <div class="cap">2026年、北海道のオーガニック視察ツアー。広い畑を背に、約100名で。</div>
+    </div>
   </div>
 </section>
 
@@ -261,6 +246,10 @@
     <h2 class="sec-title">この1年で、持ち帰ってほしいもの</h2>
     <p>ただ知識を増やすための1年ではありません。</p>
     <p>学んだことを自分で確かめ、考え、人に尋ねられたときにも、誰かの言葉を借りるのではなく、自分の言葉で話せる状態に近づいていくこと。そして、一人だけで考え続けるのではなく、同じようにオーガニックに関心を持つ人たちと、話し、問い、学び合える場を持つこと。</p>
+    <div class="photo">
+      <img src="img/tour-hall.jpg" alt="ビオホテル・タナホフツアーに参加したみなさん" loading="lazy">
+      <div class="cap">2026年のビオホテル・タナホフツアー。ドイツまで来てくれた受講生のみなさんと。</div>
+    </div>
     <p>このコースで用意しているのは、そのための学びとつながりです。</p>
     <div class="card">
       <ul class="feat">
@@ -345,14 +334,6 @@
       <li>登壇やトークショーを主催する機会<span class="sched">審査・招待制</span></li>
     </ul>
     <p class="small">審査や招待が必要なため、入学すればすべてが自動的に受けられるわけではありません。</p>
-    <div class="photo">
-      <img src="img/band_hokkaido2026.jpg" alt="2026年 北海道のオーガニック視察ツアーに集まった参加者" loading="lazy">
-      <div class="cap">2026年、北海道のオーガニック視察ツアー。広い畑を背に、約100名で。</div>
-    </div>
-    <div class="photo">
-      <img src="img/tour-hall.jpg" alt="ビオホテル・タナホフツアーに参加したみなさん" loading="lazy">
-      <div class="cap">2026年のビオホテル・タナホフツアー。ドイツまで来てくれた受講生のみなさんと。</div>
-    </div>
   </div>
 </section>
 
